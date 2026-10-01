@@ -222,10 +222,11 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
   </div>
   <div class="m-topbar-row2">
     <select class="m-period-select" id="mPeriodSelect" onchange="switchMonth(this.value)">
-      <option value="all">📊 All Months — Combined View</option>
+      <option value="sep" selected>📅 September 2026 (Sep 1 – Sep 30)</option>
+          <option value="all">📊 All Months — Combined View</option>
       <option value="jun">📅 June 2026 (Jun 1 – Jun 29)</option>
       <option value="jul">📅 July 2026 (Jul 1 – Jul 31, 2026)</option>
-      <option value="aug" selected>📅 August 2026 (Aug 1 – Aug 31)</option>
+      <option value="aug">📅 August 2026 (Aug 1 – Aug 31)</option>
     </select>
   </div>
 </div>
@@ -243,10 +244,11 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="period-wrap">
       <span class="period-label">Report Period</span>
       <select class="period-select" id="desktopPeriodSelect" onchange="switchMonth(this.value)">
-        <option value="all">📊 All Months</option>
+        <option value="sep" selected>📅 September 2026 (Sep 1 – Sep 30)</option>
+          <option value="all">📊 All Months</option>
         <option value="jun">📅 June 2026 (Jun 1 – Jun 29)</option>
         <option value="jul">📅 July 2026 (Jul 1 – Jul 31, 2026)</option>
-      <option value="aug" selected>📅 August 2026 (Aug 1 – Aug 31)</option>
+      <option value="aug">📅 August 2026 (Aug 1 – Aug 31)</option>
     </select>
     </div>
     <nav class="sidebar-nav">
@@ -293,8 +295,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
       <div class="hb-top">
         <div class="hb-left">
           <div class="hb-eyebrow">Total Followers</div>
-                    <div class="hb-number">14,701</div>
-          <div class="hb-sub">As of <span id="followersAsOf">Aug 31, 2026</span></div>
+                    <div class="hb-number">14,789</div>
+          <div class="hb-sub">As of <span id="followersAsOf">Sep 30, 2026</span></div>
         </div>
         <div class="hb-stats">
           <div class="hb-stat"><div class="hb-stat-label">Impressions</div><div class="hb-stat-val" id="bImp">—</div><div class="hb-stat-sub" id="bImpS">—</div></div>
@@ -350,6 +352,39 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 // DATA — injected by Claude when building
 // ═══════════════════════════════════════
 const MONTHS = {
+  sep: {
+    label: "September 2026",
+    range: "Sep 1 – Sep 30, 2026",
+    labels: ["9/1", "9/2", "9/3", "9/4", "9/5", "9/6", "9/7", "9/8", "9/9", "9/10", "9/11", "9/12", "9/13", "9/14", "9/15", "9/16", "9/17", "9/18", "9/19", "9/20", "9/21", "9/22", "9/23", "9/24", "9/25", "9/26", "9/27", "9/28", "9/29", "9/30"],
+    impressions: [517, 334, 185, 170, 167, 170, 151, 597, 2180, 4567, 14531, 2614, 555, 3277, 3436, 2481, 1073, 2176, 731, 403, 1144, 294, 829, 555, 1267, 487, 316, 621, 682, 1286],
+    engagements: [10, 2, 0, 0, 2, 3, 2, 12, 87, 97, 93, 29, 11, 99, 82, 80, 34, 42, 11, 7, 47, 13, 41, 28, 40, 21, 8, 46, 39, 66],
+    followers: [1, 3, 2, 2, 1, 1, 4, 0, 6, 11, 25, 3, 1, 16, 1, 7, 9, 8, 6, 5, 2, 4, 3, 2, 2, 1, 2, 1, 6, 3],
+    totalImp: 47796,
+    totalEng: 1052,
+    totalFol: 138,
+    peakDay: "Sep 11",
+    peakVal: "14,531",
+    impTagClass: "blue",
+    impTagText: "📈 Good month",
+    followersAsOf: "Sep 30, 2026",
+    audience: {
+      locations: [{name:"Greater Delhi Area", pct:22}, {name:"Mumbai Metropolitan Region", pct:14}, {name:"Greater Bengaluru Area", pct:12}, {name:"Greater Hyderabad Area", pct:4}, {name:"Pune/Pimpri-Chinchwad Area", pct:3}, {name:"Greater Chennai Area", pct:3}],
+      seniority: [{name:"Senior", pct:34, color:"#6366F1"}, {name:"Entry", pct:12, color:"#8B5CF6"}, {name:"Director", pct:12, color:"#A78BFA"}, {name:"Manager", pct:7, color:"#C4B5FD"}, {name:"VP", pct:6, color:"#DDD6FE"}, {name:"CXO", pct:6, color:"#EDE9FE"}],
+      industries: [{name:"Business Consulting and Services", pct:11}, {name:"IT Services and IT Consulting", pct:9}, {name:"Financial Services", pct:6}, {name:"Non-profit Organizations", pct:4}, {name:"Technology, Information and Internet", pct:4}, {name:"Higher Education", pct:4}]
+    },
+    posts: [
+      {title:"Arun Maira 5499711b4_indias Youth Have Been Let Down...", date:"Sep 10, 2026", imp:"18,975", badge:"green", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_indias-youth-have-been-let-down-by-a-badly-share-7503675499420987392-TSwC"},
+      {title:"Arun Maira 5499711b4_india Has Much To Learn From...", date:"Sep 9, 2026", imp:"4,147", badge:"blue", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_india-has-much-to-learn-from-china-however-share-7503163052926816256-fEP7"},
+      {title:"Arun Maira 5499711b4_economic Reforms Are Often Discussed As...", date:"Sep 11, 2026", imp:"3,485", badge:"blue", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_economic-reforms-are-often-discussed-as-though-share-7503167572079452160--0v8"},
+      {title:"Arun Maira 5499711b4_productivity For Whom India Is Promoting", date:"Sep 16, 2026", imp:"2,499", badge:"gray", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_productivity-for-whom-india-is-promoting-share-7503424915270791168-GVc3"},
+      {title:"Arun Maira 5499711b4_young Indians Only Want Gainful Employment", date:"Sep 15, 2026", imp:"2,456", badge:"gray", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_young-indians-only-want-gainful-employment-share-7505505449945784320-bfD8"},
+      {title:"Arun Maira 5499711b4_ugcpost 7506658107855421442 Wbrb", date:"Sep 18, 2026", imp:"1,618", badge:"gray", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_ugcPost-7506658107855421442-wBrb"},
+      {title:"Arun Maira 5499711b4_india Needs More Productivity It Also...", date:"Sep 14, 2026", imp:"1,491", badge:"gray", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_india-needs-more-productivity-it-also-needs-share-7503424250502897664-80bB"},
+      {title:"Arun Maira 5499711b4_india Must Build Not Just Trade...", date:"Sep 15, 2026", imp:"1,474", badge:"gray", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_india-must-build-not-just-trade-the-brics-share-7505508654490677248-XMZY"},
+      {title:"Arun Maira 5499711b4_why Do Organisations Ask People To...", date:"Sep 23, 2026", imp:"1,244", badge:"gray", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_why-do-organisations-ask-people-to-collaborate-share-7505163739495845888-l1A_"},
+      {title:"Arun Maira 5499711b4_the People Being Measured Should Also...", date:"Sep 21, 2026", imp:"1,033", badge:"gray", url:"https://www.linkedin.com/posts/arun-maira-5499711b4_the-people-being-measured-should-also-be-share-7505145726587297792-Dkpb"}
+    ]
+  },
   aug: {
     label: "August 2026",
     range: "Aug 1 – Aug 31, 2026",
@@ -424,7 +459,7 @@ const MONTHS = {
     ]
   }
 };
-const DEFAULT_MONTH = 'aug';
+const DEFAULT_MONTH = 'sep';
 
 // ═══════════════════════════════════════
 // CHARTS
